@@ -1,0 +1,38 @@
+@import url("https://fonts.cdnfonts.com/css/bebas-neue");
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar * {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18pt;
+}
+
+#title {
+  font-size: 22pt;
+  font-weight: 600;
+}
+
+.mat-toolbar {
+  background-color: #77857a;
+  height: 50px;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.navigation span {
+  flex: 2 1 auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.vertical-line {
+  border-left: 1px solid black;
+}
