@@ -6,33 +6,51 @@
 
 .mat-toolbar * {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 18pt;
+  font-size: calc(1rem + 1vw);
+  color: black;
 }
 
 #title {
-  font-size: 22pt;
+  font-size: calc(1rem + 2vw);
   font-weight: 600;
+  padding: 2vw;
 }
 
 .mat-toolbar {
   background-color: #77857a;
-  height: 50px;
+  height: 5vh;
+  min-height: 3em;
+  padding: 0 !important;
+  width: 100vw;
 }
 
 .navigation {
   display: flex;
-  gap: 20px;
+  height: 100%;
   vertical-align: middle;
   align-items: center;
+  background-color: #92a395;
 }
 
 .navigation span {
-  flex: 2 1 auto;
-  height: 50px;
   display: flex;
+  flex: 1 1 0;
+  height: 100%;
   align-items: center;
+  justify-content: space-between;
+  border-left: 1px solid black;
+
+  &:hover {
+    background-color: #a6afa8;
+  }
 }
 
-.vertical-line {
-  border-left: 1px solid black;
+.navigation p,
+.navigation i {
+  flex: 1 1 0;
+  display: flex;
+  margin: 0 !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
 }
