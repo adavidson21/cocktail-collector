@@ -7,6 +7,4 @@ import { ViewEncapsulation } from '@angular/core';
   styleUrls: ['./home.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class HomeComponent {
-  public value = '';
-}
+export class HomeComponent {}

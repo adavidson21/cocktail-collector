@@ -7,9 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './modules/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { AngularMaterialModule } from './angular-material.module';
+import { DrinkDeckComponent } from './modules/drink-deck/drink-deck.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, DrinkDeckComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

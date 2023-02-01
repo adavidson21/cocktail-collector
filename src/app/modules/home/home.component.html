@@ -1,21 +1,14 @@
-<app-header></app-header>
-
 <div class="search-header">
-  <img src="../../../assets/images/bar-bw.jpg">
-  <h1>
-    Mix,
-    <br> Measure,
-    <br> and Master your home bar.
-  </h1>
+    <img src="../../../assets/images/bar-bw.jpg">
+    <h1 id="main-heading">
+        Mix,
+        <br> Measure,
+        <br> and Master your home bar.
+    </h1>
 
-  <div class="search-bar-container">
     <mat-form-field class="search-bar">
-      <mat-label>Search for any recipe</mat-label>
-      <input matInput type="text" [(ngModel)]="value">
-      <button matSuffix mat-icon-button aria-label="Search">
-        <mat-icon>arrow_circle_down</mat-icon>
-      </button>
+        <mat-label>Search for any recipe</mat-label>
+        <input matInput type="text">
+        <button matSuffix mat-icon-button aria-label="Search"><mat-icon>arrow_circle_down</mat-icon></button>
     </mat-form-field>
-  </div>
-
 </div>
