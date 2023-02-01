@@ -13,6 +13,11 @@
     <span>
       <p>Drink Deck</p>
     </span>
-    <span><i class="ph-user"></i></span>
+    <span><button mat-button [matMenuTriggerFor]="menu"><i class="ph-user"></i></button></span>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>User Name</button>
+      <button mat-menu-item>Settings</button>
+      <button mat-menu-item>Log Out</button>
+    </mat-menu>
   </div>
 </mat-toolbar>
