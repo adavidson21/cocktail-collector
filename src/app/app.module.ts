@@ -8,15 +8,22 @@ import { HomeComponent } from './modules/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { AngularMaterialModule } from './angular-material.module';
 import { DrinkDeckComponent } from './modules/drink-deck/drink-deck.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, DrinkDeckComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    DrinkDeckComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
     AngularMaterialModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
