@@ -1,14 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HttpService {
   /** Base URL (with test API key) */
-  private baseURL = 'https://www.thecocktaildb.com/api/json/v1/1/';
+  private baseURL = environment.COCKTAIL_API_BASEURL;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    console.log(this.baseURL);
+  }
 
   /**
    * Gets the ingredients.
