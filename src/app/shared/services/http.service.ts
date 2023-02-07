@@ -9,9 +9,7 @@ export class HttpService {
   /** Base URL (with test API key) */
   private baseURL = environment.COCKTAIL_API_BASEURL;
 
-  constructor(private http: HttpClient) {
-    console.log(this.baseURL);
-  }
+  constructor(private http: HttpClient) {}
 
   /**
    * Gets the ingredients.
