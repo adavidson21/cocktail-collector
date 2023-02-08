@@ -1,25 +1,30 @@
 <mat-toolbar color="primary">
-    <span id="title" (click)="navigate('')">Cocktail Collector</span>
+  <span id="title" (click)="navigate('')">Cocktail Collector</span>
 
-    <span class="spacer"></span>
+  <span class="spacer"></span>
 
-    <div class="navigation">
-        <span>
+  <div class="navigation">
+    <span>
       <p>Cabinet</p>
     </span>
-        <span>
+    <span>
       <p>Bar Book</p>
     </span>
-        <span>
+    <span>
       <p (click)="navigate('drinkdeck')">Drink Deck</p>
     </span>
-        <span><button mat-button [matMenuTriggerFor]="menu"><i class="ph-user"></i></button></span>
-        <!--TODO: Values should differ if user is already logged in or not.-->
-        <mat-menu #menu="matMenu">
-            <!--TODO: Placeholder until user's name is populated.-->
-            <button mat-menu-item>User Name</button>
-            <button mat-menu-item>Settings</button>
-            <button mat-menu-item>Log Out</button>
-        </mat-menu>
-    </div>
+    <span>
+      <span mat-button [matMenuTriggerFor]="menu"><i class="ph-user"></i></span>
+      <mat-menu #menu="matMenu">
+        <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+          <button mat-menu-item (click)="auth.logout({ logoutParams: { returnTo: document.location.origin } })">
+            Log out
+          </button>
+        </ng-container>
+        <ng-template #loggedOut>
+          <button mat-menu-item (click)="auth.loginWithRedirect()">Log in / Create Account</button>
+        </ng-template>
+      </mat-menu>
+    </span>
+  </div>
 </mat-toolbar>

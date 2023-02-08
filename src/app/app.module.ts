@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularMaterialModule } from './angular-material.module';
 import { DrinkDeckComponent } from './modules/drink-deck/drink-deck.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthModule } from '@auth0/auth0-angular';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,13 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     AngularMaterialModule,
     HttpClientModule,
+    AuthModule.forRoot({
+      domain: 'dev-4qe8jcd2chd0ppuo.us.auth0.com',
+      clientId: 'YC4CV4Rsk10ftwP1pvoYh3uqsA1QDsfU',
+      authorizationParams: {
+        redirect_uri: window.location.origin,
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
