@@ -6,10 +6,12 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root',
 })
 export class HttpService {
-  /** Base URL (with test API key) */
+  /** Base URL */
   private baseURL = environment.COCKTAIL_API_BASEURL;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    console.log('base', this.baseURL);
+  }
 
   /**
    * Gets the ingredients.
@@ -49,5 +51,14 @@ export class HttpService {
     this.http.get(this.baseURL + 'list.php?a=list').subscribe((data) => {
       return Object.values(data);
     });
+  }
+
+  /**
+   * Gets the recipes.
+   * @returns The recipes.
+   */
+  async getDrinks() {
+    // TODO: Use random endpoint once patreon supporter. Temporarily use search by name for development.
+    return await this.http.get(this.baseURL + 'search.php?s=margarita');
   }
 }

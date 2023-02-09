@@ -1,14 +1,28 @@
 <div class="search-header">
-    <img src="../../../assets/images/bar-bw.jpg">
-    <h1 id="main-heading">
-        Mix,
-        <br> Measure,
-        <br> and Master your home bar.
-    </h1>
+  <img src="../../../assets/images/bar-bw.jpg">
+  <h1 id="main-heading">
+    Mix,
+    <br> Measure,
+    <br> and Master your home bar.
+  </h1>
 
-    <mat-form-field class="search-bar">
-        <mat-label>Search for any recipe</mat-label>
-        <input matInput type="text">
-        <button matSuffix mat-icon-button aria-label="Search"><mat-icon>arrow_circle_down</mat-icon></button>
-    </mat-form-field>
+  <mat-form-field class="search-bar">
+    <mat-label>Search for any recipe</mat-label>
+    <input matInput type="text">
+    <button matSuffix mat-icon-button aria-label="Search"><mat-icon>arrow_circle_down</mat-icon></button>
+  </mat-form-field>
+</div>
+
+<div class="body">
+  <mat-card class="drink-card" *ngFor="let drink of drinks!.drinks">
+    <mat-card-header>
+      <mat-card-title>{{drink.strDrink}}</mat-card-title>
+      <mat-card-subtitle>{{drink.strCategory}}, {{drink.strAlcoholic}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{drink.strDrinkThumb}} alt="Drink Image">
+
+    <mat-card-actions>
+      <button mat-button><mat-icon>arrow_circle_down</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>
 </div>

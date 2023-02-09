@@ -1,80 +1,60 @@
 /**
- * Drink Class.
- *
- * Based on API: https://www.thecocktaildb.com/api.php
+ * Generated interface based on response from https://www.thecocktaildb.com/api.php
  */
-export class Drink {
-  /** The ID of the drink. */
-  id: number;
+export interface DrinkRoot {
+  drinks: Drink[];
+}
 
-  /** The name of the drink. */
-  name: string;
-
-  /** The tags list. */
-  tags: string[];
-
-  /** The category. */
-  category: string;
-
-  /** The alcohol content. */
-  alcoholContent: string;
-
-  /** The glass type. */
-  glass: string;
-
-  /** The instructions.  */
-  instructions: string;
-
-  /** The thumbnail image URL. */
-  thumbnail: string;
-
-  /** The ingredients list. */
-  ingredients: string[];
-
-  /** The measurements list.  */
-  measurements: string[];
-
-  /** The IBA (International Bar Association) category */
-  ibaCategory: string | undefined;
-
-  /**
-   * The drink constructor.
-   *
-   * @param id The ID.
-   * @param name The name.
-   * @param tags The tags list.
-   * @param category The category.
-   * @param alcoholContent The alcohol content.
-   * @param glass The glass.
-   * @param instructions The instructions.
-   * @param thumbnail The thumbnail URL.
-   * @param ingredients The ingredients list.
-   * @param measurements The measurements.
-   * @param ibaCategory The IBA category.
-   */
-  constructor(
-    id: number,
-    name: string,
-    tags: string[],
-    category: string,
-    alcoholContent: string,
-    glass: string,
-    instructions: string,
-    thumbnail: string,
-    ingredients: string[],
-    measurements: string[],
-    ibaCategory?: string
-  ) {
-    this.id = id;
-    this.name = name;
-    this.tags = tags;
-    this.category = category;
-    this.alcoholContent = alcoholContent;
-    this.glass = glass;
-    this.instructions = instructions;
-    this.thumbnail = thumbnail;
-    this.ingredients = ingredients;
-    this.measurements = measurements;
-    this.ibaCategory = ibaCategory ?? undefined;
-  }
+export interface Drink {
+  idDrink: string;
+  strDrink: string;
+  strDrinkAlternate: any;
+  strTags: string;
+  strVideo: any;
+  strCategory: string;
+  strIBA: string;
+  strAlcoholic: string;
+  strGlass: string;
+  strInstructions: string;
+  strInstructionsES: any;
+  strInstructionsDE: string;
+  strInstructionsFR: any;
+  strInstructionsIT: string;
+  'strInstructionsZH-HANS': any;
+  'strInstructionsZH-HANT': any;
+  strDrinkThumb: string;
+  strIngredient1: string;
+  strIngredient2: string;
+  strIngredient3: string;
+  strIngredient4: string;
+  strIngredient5: any;
+  strIngredient6: any;
+  strIngredient7: any;
+  strIngredient8: any;
+  strIngredient9: any;
+  strIngredient10: any;
+  strIngredient11: any;
+  strIngredient12: any;
+  strIngredient13: any;
+  strIngredient14: any;
+  strIngredient15: any;
+  strMeasure1: string;
+  strMeasure2: string;
+  strMeasure3: string;
+  strMeasure4: any;
+  strMeasure5: any;
+  strMeasure6: any;
+  strMeasure7: any;
+  strMeasure8: any;
+  strMeasure9: any;
+  strMeasure10: any;
+  strMeasure11: any;
+  strMeasure12: any;
+  strMeasure13: any;
+  strMeasure14: any;
+  strMeasure15: any;
+  strImageSource: string;
+  strImageAttribution: string;
+  strCreativeCommonsConfirmed: string;
+  dateModified: string;
 }

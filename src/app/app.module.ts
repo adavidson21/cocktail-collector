@@ -10,6 +10,7 @@ import { AngularMaterialModule } from './angular-material.module';
 import { DrinkDeckComponent } from './modules/drink-deck/drink-deck.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from '@auth0/auth0-angular';
+import { HttpService } from './shared/services/http.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { AuthModule } from '@auth0/auth0-angular';
       },
     }),
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

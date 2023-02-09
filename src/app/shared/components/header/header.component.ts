@@ -15,9 +15,7 @@ export class HeaderComponent {
     public httpService: HttpService,
     public auth: AuthService,
     @Inject(DOCUMENT) public document: Document
-  ) {
-    this.httpService.getCategories();
-  }
+  ) {}
 
   navigate(path: string) {
     this.router.navigateByUrl(path);
