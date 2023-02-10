@@ -13,16 +13,28 @@
   </mat-form-field>
 </div>
 
-<div class="body">
-  <mat-card class="drink-card" *ngFor="let drink of drinks!.drinks">
-    <mat-card-header>
-      <mat-card-title>{{drink.strDrink}}</mat-card-title>
-      <mat-card-subtitle>{{drink.strCategory}}, {{drink.strAlcoholic}}</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src={{drink.strDrinkThumb}} alt="Drink Image">
+<h2>Popular</h2>
 
-    <mat-card-actions>
-      <button mat-button><mat-icon>arrow_circle_down</mat-icon></button>
-    </mat-card-actions>
-  </mat-card>
+<div class="drink-carousel">
+  <div class="popular-drinks--cards">
+    <button mat-button (click)="previous()" class="carousel-button">
+      <mat-icon class="left-arrow">arrow_circle_down</mat-icon>
+    </button>
+
+    <div class="data-list show-in-row">
+      <mat-card class="drink-card" *ngFor="let drink of displayedDrinks; let index = index; let last = last">
+        <img mat-card-image src={{drink.strDrinkThumb}} alt="Drink Image">
+        <mat-card-actions>
+          {{drink.strDrink}}
+          <button mat-button class="drink-card--button">
+            <mat-icon>arrow_circle_down</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <button mat-button (click)="next()" class="carousel-button">
+      <mat-icon>arrow_circle_down</mat-icon>
+    </button>
+  </div>
 </div>

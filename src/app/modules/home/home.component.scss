@@ -32,10 +32,69 @@ img {
   margin-bottom: 0;
 }
 
+/* Popular Drinks Section */
+
+h2 {
+  padding: 20px;
+}
+
+.popular-drinks {
+  display: grid;
+  grid-template-columns: 2.5% 95% auto;
+  height: 250px;
+}
+
+.carousel-button {
+  font-size: 15px !important;
+  min-width: unset !important;
+  min-height: unset !important;
+}
+
+.drink-card--button {
+  font-size: 10px !important;
+  min-width: unset !important;
+  min-height: unset !important;
+  padding: 0 !important;
+}
+
+.drink-tags {
+  font-size: 8pt !important;
+}
+
 .drink-card {
-  max-width: 200px;
+  width: 20%;
 }
 
 .mat-icon {
   transform: rotate(-90deg);
+}
+
+.popular-drinks--cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 1px;
+  align-items: center;
+}
+
+.data-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.data-list .data-container {
+  min-width: 100px;
+}
+
+.left-arrow {
+  transform: rotate(90deg) !important;
+}
+
+.mdc-card__actions {
+  height: 80px;
+  justify-content: space-between;
+  background-color: #d6dad7;
 }
